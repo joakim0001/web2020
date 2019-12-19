@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	
+	<meta charset="UTF-8">
+	<title>layout</title>
+	<style>
+		/* header */
+		*{margin: 0;padding: 0;}
+		li{list-style: none;}
+
+		a:visited,a:link{
+			text-decoration: none;
+			color: #000;}
+
+		
+	    div#header{
+			width: 1000px;
+			padding-top: 20px;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			
+		}
+		div#header>h1 {
+			width: 100px;
+			background-color: #fff;
+			margin:0 auto;
+			text-align: center;
+		 }
+
+
+        div#header>ul.gnb{
+        	padding-top: 20px; }
+        
+        div#header>ul.gnb:after{
+			content: "";
+			display: block;
+			clear: both;}
+
+		div#header>ul.gnb>li{
+			float: left;
+			width:160px;
+			background-color: skyblue;
+
+		}
+
+		div#header>ul.gnb>li>a{
+			display: block;
+			text-align: center;
+			line-height: 40px;
+
+		}
+		div#header>ul>li>a:hover{
+			background-color: #00f;
+			color:white;
+			
+		}
+
+		div#header>ul>li:hover a{
+			color: white;
+		}
+
+		
+	    .visual{height: 400px;background-color: pink;}
+		
+		div.container {
+			
+			padding: 20px 0;
+		}
+
+		div.container>ul{
+			width: 1000px;
+			background-color: #00f;
+			margin: 0 auto;}
+		
+
+		div.container>ul:after{
+			content: "";
+			display:block;
+			clear: both;
+			
+		}
+
+		div.container>ul>li {
+			background-color: #ff0;
+			width: 242.5px;
+			/*width: 242.5px; /**/
+			float: left;
+			margin-right: 10px;
+		}
+		
+
+		div.container>ul>li:last-child {
+			margin-right: 0;
+		}
+
+		div.container>ul>li>img{
+			width: 100%;
+			display: block;
+
+
+
+		}
+		
+
+
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1>logo</h1>
+		<ul class="gnb">
+			   <li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+				<li><a href="#">menu6</a></li>
+		</ul>
+		
+	</div>
+	<div class="visual"></div>
+	<div class="container">
+		<ul>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+		</ul>
+	</div>
+</body>
+</html>
