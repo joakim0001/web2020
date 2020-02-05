@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	
+	<meta charset="UTF-8">
+	<title>DOM</title>
+	<script>
+		function change(){
+			var spanArray = document.getElementsByTagName("span");
+			for (var i=0;i<spanArray.length;i++){
+				console.log(spanArray[i]);
+				var span = spanArray[i];
+				span.style.color = "red";
+
+				// document.getElementsByTagName("span")[i].style.color = "red";
+				span.style.fontSize = "20px";
+				span.style.backgroundColor = "skyblue";
+
+			}
+		}
+	</script>
+</head>
+<body>
+	<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, delectus.</h3>
+	<button onclick="change()">누르세요</button>
+	<hr>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus velit harum reprehenderit provident odit dolorem voluptatum adipisci ab, assumenda, nulla minima numquam officia nam iusto scum illo nemo, aliquid fugit odit officiis ea molestias?<span>사과</span> Laborum consectetur dicta doloribus, vitae odit sequi impedit, libero id quia. Voluptatibus illum, ducimus. Doloremque iste alias illum accusamus hic maxime perspiciatis reprehenderit commodi quaerat nihil excepturi magnam obcaecati, eos, praesentium, dolorem eligendi cum! Inventore unde, nulla quasi
+	<span>오렌지</span> neque architecto, magni? Perspiciatis error odit architecto officia, aliquid ipsa. Quam eligendi deserunt voluptatem explicabo qui dicta dolore, repellat assumenda alias distinctio, veritatis ium odio molestiae fugiat saepe amet nihil dignissimos veritatis hic. Fugiat odio praesentium eveniet aperiam quidem provident<span>바나나</span> officia magni aut sunt, quis alias! Cupiditate <span>수박</span> fugit mollitia illum pariatur incidunt, architecto sequi vero et placeat necessitatibus. Eum, 
+
+	
+
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	
+	<meta charset="UTF-8">
+	<title>menu2</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+
+	<style>
+		nav.gnb{width: 1000px;margin: 0 auto;background-color: pink;}
+		.submenu{display: none;}
+		nav.gnb>ul{position: relative;}
+		nav.gnb>ul>li{float: left;width: 20%;}
+		nav.gnb>ul>li>a{display: block;line-height: 40px;text-align: center;}
+
+		nav.gnb>ul>li:hover{background-color: skyblue;}
+
+		/* nav.gnb>ul>li:first-child .submenu{display: block;} */
+		nav.gnb>ul>li:hover .submenu{display: block;}
+		.submenu{position: absolute;left: 0;width: 100%;
+		background-color: #f00;}
+		.submenu>li>{float: left;}
+		.submenu>li>a{display: block;line-height: 30px;padding: 0 20px;}
+		.visual{height: 400px;background-color: #f0f;}
+
+		.visual{width: 1000px;margin: 0 auto;}
+		.visual img{width: 100%;}
+
+	</style>
+
+	</style>
+	
+	
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxSlider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider();
+		});
+
+	</script>
+
+
+
+
+
+</head>
+<body>
+	<nav class="gnb">
+		<ul class="clearfix">
+			<li >
+				<a href="#">menu1</a>
+					<ul class="submenu clearfix">
+						<li><a href="#">sub0101</a></li>
+						<li><a href="#">sub0102</a></li>
+						<li><a href="#">sub0103</a></li>
+					</ul>
+			</li>
+			<li>
+				<a href="#">menu2</a>
+					<ul class="submenu clearfix" style="padding-left: 150px">
+						<li><a href="#">sub0101</a></li>
+						<li><a href="#">sub0102</a></li>
+						<li><a href="#">sub0103</a></li>
+					</ul>
+			</li>
+			<li>
+				<a href="#">menu3</a>
+					<ul class="submenu clearfix" style="padding-left: 350px"	>
+						<li><a href="#">sub0101</a></li>
+						<li><a href="#">sub0102</a></li>
+						<li><a href="#">sub0103</a></li>
+					</ul>
+			</li>
+			<li>
+				<a href="#">menu4</a>
+					<ul class="submenu clearfix" style="padding-left: 550px">
+						<li><a href="#">sub0101</a></li>
+						<li><a href="#">sub0102</a></li>
+						<li><a href="#">sub0103</a></li>
+					</ul>
+			</li>
+			<li>
+				<a href="#">menu5</a>
+					<ul class="submenu clearfix" style="padding-left: 750px">
+						<li><a href="#">sub0101</a></li>
+						<li><a href="#">sub0102</a></li>
+						<li><a href="#">sub0103</a></li>
+					</ul>
+			</li>
+		</ul>
+	</nav>
+	<div class="visual">
+		<ul class="slider">
+			<li><img src="../img/pc03.jpg"></li>
+			<li><img src="../img/pc02.jpg"></li>
+			<li><img src="../img/pc01.jpg"></li>
+		</ul>
+
+
+	
+	
+	
+	</div>
+
+</body>
+</html>

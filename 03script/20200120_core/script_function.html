@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	
+	<meta charset="UTF-8">
+	<title>function</title>
+</head>
+<body>
+	<script>
+
+		function adder(a,b){ /*function다음에 오는 이름은 임의로 설정해도 됨 ()는 정해진 문법*/
+			/*var a = 10;
+			var b = 20;*/
+			var sum = a + b; /* var 다음에 오는 이름은 정해진것만 쓸 수 있음*/
+		/*	document.write(sum);*/
+			return sum;
+		}
+
+		function multi(a,b){
+			var sum = a *b;
+			return sum;
+		}
+
+
+		var n = adder(100,500);
+		var m = multi(100,500);
+
+		document.write(n+"<br>");
+		document.write(m)
+	/*	adder();*/
+
+	</script>
+
+	<br>
+	<script>
+		function dan(dan){
+		/*	var dan = 3;*/
+		document.write(dan + "단 <br>")
+			for(var i=1;i<=9;i++){
+				document.write(dan + " × " + i + "=" +dan*i +"<br>");
+			}
+		}
+
+	</script>
+	<style>
+		
+		.box,.box1,.box2{float: left;width: 200px;}
+		.box{background-color: red; color:#fff; font-size: 13px;}
+		.box1{background-color: skyblue; font-weight: 900;color: red;font-size: 18px;}
+		.box2{background-color: yellow;font-size: 24px;color: #dbdbdb;}
+	</style>
+	<div class="box">
+		<script>dan(3);</script>
+	</div>
+	<div class="box1">
+		<script>dan(4);</script>
+	</div>
+	</div>
+	<div class="box2">
+		<script>dan(8);</script>
+	</div>
+</body>
+</html>

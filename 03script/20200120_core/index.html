@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	
+	<meta charset="UTF-8">
+	<title>core</title>
+	
+</head>
+<body>
+	<script>
+		var x = 100; /*전역변수*/
+		var cite = "그녀는 \"누구세요\"라고 했습니다.";
+		var	cite1 = '그녀는 "누구세요"라고 했습니다.';
+		var	hanhref = "<a href=\"http://www.naver.com\">링크</a>";
+		function name(){
+			var y = 200; /*지역변수*/
+			var x = 300; /*지역변수*/
+			document.write("지역변수:" + y + "<br>");  /*문자와 문자를 더하여 나열할때 사용함*/
+			var z; /*지역변수*/
+			z = this.x+y; /*전역변수 x + 지역변수 y*/
+			document.write("전체합계:"+ z);
+		}
+		name(); /*없으면 아무것도 출력이 안됨*/
+		/*document.write(y);*/ /*지역변수로 출력안됨*/
+		document.write("cite");
+		document.write(hanhref);
+
+	</script>
+	<!-- <a href="#"  onclick="name()">버튼</a>
+	<div style="height: 20px; background-color:red;"></div>	 -->
+	
+	<p onmouseover="document.body.style.color='red'" 
+
+	 onmouseout="document.body.style.color='black'">테스트</p>
+	
+	 <script>
+	 	function bodycolorOver(){
+	 		document.body.style.backgroundimages="url(../../img/pc01.jpg)";
+	 	}
+	 	function bodycoloruot(){
+	 		document.body.style.color='white';
+	 	}
+	 </script>
+	 
+	 <div onmouseover="document.body.style.color='red'">안녕하세요
+	 	
+	 </div>
+</body>
+</html>
