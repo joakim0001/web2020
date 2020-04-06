@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$.ajax({
+				url:"book.xml",
+				dataType:"xml",
+				success:function(data){
+					//$(data).find("book").each(function(){});
+					$(data).find("book").each(function(){
+						var title = $("title",this).text();
+						var author = $("author",this).text();
+						var price = $("price",this).text();
+						var img= $("bookimg",this).text();
+						txt +="<li>";
+						txt += " img src ='img/"+img+"'>";
+						txt += "<div class='txt'>"+title+"</div>";
+						txt += "</li>"; 
+
+						
+						$(".han").append(txt)
+					});
+				}
+			}); //ajax end
+		}); // $ end
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<ul class="han"></ul>
+	</div>
+</body>
+</html>
+	

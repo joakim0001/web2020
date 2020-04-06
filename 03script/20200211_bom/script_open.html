@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	
+	<meta charset="UTF-8">
+	<title>open</title>
+	<script>
+		function load(url){
+			window.open(url,"naver","width=300,height=400,resizable=no,");
+		}
+	</script>
+</head>
+<body>
+<a href="http://www.naver.com" target="_blank">네이버</a> 
+    <!-- blank는 새로운 창으로 열림 -->
+
+    <hr>
+    <a href="#" onclick="load('http://www.naver.com')">링크1</a><br>
+      <a href="#" onclick="load('http://www.daum.net')">링크2</a><br>
+      <a href="javascript:load('view.html')">링크3</a>
+</body>
+</html

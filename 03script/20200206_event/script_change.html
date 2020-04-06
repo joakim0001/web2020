@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>change</title>
+	<script>
+
+		var next = 1;
+		function change(){
+
+			next++; /*next = next + 1;*/
+			if(next == 10){
+				next = 0;
+			}
+		 /*next = next%10*/
+			console.log(next);
+		}
+	</script>
+</head>
+<body>
+	<img src="../../img/apple.png" alt="" onclick="change()">
+</body>
+</html>

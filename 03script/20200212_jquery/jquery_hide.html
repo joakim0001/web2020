@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<style>
+		button#btnAdd{display: none;}
+		li.active{background-color: red}
+
+	</style>
+	<script>
+		/*$("선택자").메소드();*/
+		$(document).ready(function(){
+			$("button#btnAdd").hide();
+			$("button#btnDel").click(function(){
+				$("p").hide();
+				$(this).hide()
+				$("#btnAdd").show();
+			});
+			$("button#btnAdd").click(function(){
+				$("p").show();
+				$(this).hide();
+				$("#btnDel").show();
+			});
+
+		/*	p태그 갯수 구하는 방법*/
+			/*console.log($("p").length);*/
+
+			var pCount = $("p").length;
+			console.log(pCount);
+
+			$("p").eq(0).hide();         /*eq는 태그의 몇번째를 지정하는 함수*/
+			$("p").eq(1).hide();
+
+			$("div").eq(0).hide();
+			$("div").eq(1).hide();
+			$("div").eq(2).hide();
+
+
+			$("ul>li").eq(0).click(function(){
+				$(".box2").hide();
+				$(".box3").hide();
+				$(".box1").show();
+				$(this).addClass("active");
+				$("ul>li").removeClass(0);
+				
+				/*$(".clik2").removeClass("active");
+				$(".clik3").removeClass("active");
+*/
+			});
+			$("ul>li").eq(1).click(function(){
+				$(".box1").hide();
+				$(".box3").hide();
+				$(".box2").show();
+				$("ul>li").removeClass();
+				$(this).addClass("active");
+				/*$(".clik1").removeClass("active");
+				$(".clik3").removeClass("active");
+*/
+			
+			});
+				
+			$("ul>li").eq(2).click(function(){
+				$(".box1").hide();
+				$(".box2").hide();
+				$(".box3").show();
+				$("ul>li").removeClass();
+				$(this).addClass("active");
+				/*$(".clik1").removeClass("active");
+				$(".clik2").removeClass("active");*/
+
+				
+			});
+				
+
+
+		});
+	</script>
+<style>
+	ul>li{float: left;border: 1px solid #000; padding:5px }
+</style>
+
+</head>
+<body>
+
+	<p>Lorem ipsum dolor sit amet.</p>
+	<p>Non esse ut expedita inventore?</p>
+	<button id="btnDel">메세지삭제</button>
+	<button id="btnAdd">메세지생성</button>
+
+	<ul class="clearfix">
+		<li class="clik1">menu1</li>
+		<li class="clik2">menu2</li>
+		<li class="clik3">menu3</li>
+	</ul>
+	<div class="box1">1.Lorem ipsum dolor sit amet.</div>
+	<div class="box2">2.Fugit debitis reprehenderit obcaecati laudantium!</div>
+	<div class="box3">3.Hic rerum saepe, iusto vitae.</div>
+	
+
+</body>
+</html>

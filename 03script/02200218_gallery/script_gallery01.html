@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>gallery01연습</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(function(){
+			$(".thmb").click(function(){
+			 	var i =$(this).index();
+			 	console.log(i);
+			$("#img > p").hide().eq(i).show();
+			});
+			var current = 0;
+			$(".right").click(function(){
+				if(current<3){
+					current++;
+					if(current ==3){current=0;}
+				}
+				hy();
+			});
+			$(".left").click(function(){
+				if (current>-1){
+					current--;
+					if(current == -1){current=2;}
+				}
+				hy();
+			});
+			function hy(){
+				console.log(current);
+				var num = current*824*-1;
+				$(".container>ul").stop().animate({left:num},300)
+			}
+		});
+
+
+	</script>
+	<style>
+		#gly{width:824px;height: 475px;margin:20px auto;background-color:red;}
+		#gly #img{width:760px;height: 470px;margin: 0 auto;}
+		#gly #img p{display: none;}
+		#thmb{width:824px;height: 95px;background-color: skyblue;margin: 0 auto;left: 20px}
+		#thmb div{float: left;}
+		#thmb div.left{width: 10px;}
+
+		#thmb .container{width: 760px;height: 95px;position: relative;overflow: hidden;}
+		#thmb .container ul{width:3296px;position: absolute;left: 0;background-color:red}
+		#thmb .container ul li{float: left;width:206px;height: 95px;}
+
+		.mu0{margin-left: 0 !important;}
+
+	</style>
+</head>
+<body>
+	<div id="gly">
+		<div id="img">
+			<p style="display: block;"><img src="img/0.jpg" alt=""></p>
+			<p><img src="img/1.jpg" alt=""></p>
+			<p><img src="img/2.jpg" alt=""></p>
+			<p><img src="img/3.jpg" alt=""></p>
+			<p><img src="img/4.jpg" alt=""></p>
+			<p><img src="img/5.jpg" alt=""></p>
+			<p><img src="img/6.jpg" alt=""></p>
+			<p><img src="img/7.jpg" alt=""></p>
+			<p><img src="img/8.jpg" alt=""></p>
+			<p><img src="img/9.jpg" alt=""></p>
+			<p><img src="img/10.jpg" alt=""></p>
+			<p><img src="img/11.jpg" alt=""></p>
+			<p><img src="img/12.jpg" alt=""></p>
+			<p><img src="img/13.jpg" alt=""></p>
+			<p><img src="img/14.jpg" alt=""></p>
+			<p><img src="img/15.jpg" alt=""></p>
+			
+		</div>
+	</div>
+	<div id="thmb">
+		<div class="left" class="clearfix">
+			<img src="img/btn_left.gif" alt="">
+		</div>
+		<div class="container">
+			<ul class="clearfix">
+				<li class="thb mu0"><img src="img/thumb1.jpg" alt="" >0</li>
+				<li class="thb"><img src="img/thumb2.jpg" alt="" >1</li>
+				<li class="thb"><img src="img/thumb3.jpg" alt="" >2</li>
+				<li class="thb" ><img src="img/thumb4.jpg" alt="" >3</li>
+
+				<li class="thb mu0"><img src="img/thumb5.jpg" alt="" >4</li>
+				<li class="thb"><img src="img/thumb6.jpg" alt="" >5</li>
+				<li class="thb"><img src="img/thumb7.jpg" alt="" >6</li>
+				<li class="thb"><img src="img/thumb8.jpg" alt="" >7</li>
+
+				<li class="thb mu0"><img src="img/thumb9.jpg" alt="" >8</li>
+				<li class="thb"><img src="img/thumb10.jpg" alt="" >9</li>
+				<li class="thb"><img src="img/thumb11.jpg" alt="" >10</li>
+				<li class="thb"><img src="img/thumb12.jpg" alt="" >11</li>
+
+				<li class="thb mu0"><img src="img/thumb13.jpg" alt="" >12</li>
+				<li class="thb"><img src="img/thumb14.jpg" alt="" >13</li>
+				<li class="thb"><img src="img/thumb15.jpg" alt="" >14</li>
+				<li class="thb"><img src="img/thumb16.jpg" alt="" >15</li>
+				
+			</ul>
+		</div>
+		<div class="right">
+			<img src="img/btn_right.gif" alt="">
+		</div>
+	</div>
+</body>
+</html>

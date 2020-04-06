@@ -1,0 +1,37 @@
+@charset "utf-8";
+/*All스타일*/
+#fullpage{width: 100%;}
+
+#page1{background-image: url(../img/intro-bgc.jpg);
+			}
+#page2{background-image: url(../img/main1-bgc.jpg);}
+#page3{background-image: url(../img/main3-bgc.jpg);}
+
+#page4{background-image: url(../img/main4-bgc.jpg);}
+#page5{background-image: url(../img/main2-bgc.jpg);}
+#page6{background-image: url(../img/main5-bgc.jpg);}
+
+
+
+
+
+/*.page{
+	width : 100 %;
+	height : 0;
+	padding-top : calc (1000 / 1536 * 100 %); 
+	padding-bottom: calc (1000/1536*100 %);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:contain;
+	background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+	overflow: inherit;
+}*/
+
+.page{width: 100%;height:  1250px;
+			background-repeat: no-repeat;
+			background-position:center;
+			background-size:cover;
+			
+		}

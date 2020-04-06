@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>bootstrap</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.min.js"></script>
+	
+	<style>
+		/* .row div{} */
+		.h100{height: 100px;}
+		.bg-skyblue{background-color: skyblue;}
+	</style>
+</head>
+<body>
+	<!-- <div class="container text-center text-white">
+		<div class="row bg-primary">   
+			div.col-md-4*3>{test$}  항상 12는 고정
+			<div class="col-sm-6 col-md-4">test4</div>
+			<div class="col-sm-6 col-md-4">test4</div>
+			<div class="d-none  d-md-block col-md-4">test4</div>
+			
+		</div>
+		<div class="row bg-secondary">   
+			div.col-md-3*4>{test$}  항상 12는 고정
+			<div class="col-md-3">test3</div>
+			<div class="col-md-3">test3</div>
+			<div class="col-md-3">test3</div>
+			<div class="col-md-3">test3</div>
+			
+		</div>
+		<div class="row bg-success">   
+			div.col-md-6*2>{test$}  항상 12는 고정
+			<div class="col-md-6">test2</div>
+			<div class="col-md-6">test2</div>
+			
+			
+		</div>
+	</div> -->
+	<div class="bg-skyblue">
+		<div class="container text-conter bg-primary">
+			<div class="row">
+				<div class="col-sm-3 col-lg-6 bg-success h100">1</div>
+				<div class="col-sm-3 col-lg-6 bg-danger">2</div>
+				<div class="col-sm-3 d-lg-none bg-info">3</div>
+				<div class="col-sm-3 d-lg-none bg-warning">4</div>
+				<div class="col-12 d-sm-none  bg-secondary">5</div>
+				<div class="col-12 d-sm-none  bg-light">6</div>
+						
+			</div>
+		</div>
+	</div>
+	<div class="bg-skyblue">
+		<div class="container text-conter bg-primary">
+			<div class="row">
+				<div class="col bg-success h100">1</div>
+				<div class="col bg-danger">2</div>
+				<div class="col bg-info">3</div>
+				<div class="col bg-warning">4</div>
+				<div class="col bg-secondary">5</div>
+				<div class="col bg-light">6</div>
+						
+			</div>
+		</div>
+	</div>
+	<div class="bg-skyblue">
+		<div class="container text-conter bg-primary">
+			<div class="row">
+				<div class="col bg-success h100">1</div>
+				<div class="col bg-danger">2</div>
+				<div class="col bg-info">3</div>
+				<div class="col bg-warning">4</div>
+				<div class="col bg-secondary">5</div>
+				<div class="col bg-light">6</div>
+						
+			</div>
+		</div>
+	</div>
+	<!-- p-0
+	p-1 0.25   4px!-- 기본은 16px 0.25rem=0.25*16=4px
+	p-2 0.5    8px!-- 기본은 16px 0.5rem=0.5*16=8px
+	p-3 1      16px!-- 기본은 16px 1rem=1*16=16px
+	p-4 1.5    24px!-- 기본은 16px 1.5rem=1.5*16=24px
+	p-5 3	   48px!-- 기본은 16px 3rem=3*16=48px -->
+
+	<div class="container mt-3">
+		<div class="row">
+			<button type="button" class="btn btn-primary">basic</button>
+			<button type="button" class="btn btn-secondary ml-2">secondary</button>
+			<button type="button" class="btn btn-outline-primary">Primary</button>
+		</div>
+	</div>
+	<div class="container mt-5">
+		<div class="row">
+			<div class="btn-group ml-auto">
+
+				<div class="btn-group">
+					<a href="#!" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">samsung</a>
+
+					<div class="dropdown-menu">
+						<a href="#!" class="btn btn-primary">gall 10</a>
+						<a href="#!" class="btn btn-primary">gall 20</a>
+					</div>
+				</div>
+			<!-- 	apple -->
+				<div class="btn-group">
+					<a href="#!" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">apple</a>
+					<div class="dropdown-menu">
+						<a href="#!" class="btn btn-primary">iphone 10</a>
+						<a href="#!" class="btn btn-primary">iphone 20</a>
+					</div>
+				</div>
+				<!-- 	sony -->
+				<div class="btn-group">
+					<a href="#!" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">sony</a>
+
+					<div class="dropdown-menu">
+						<a href="#!" class="btn btn-primary">iphone 10</a>
+						<a href="#!" class="btn btn-primary">iphone 20</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<div class="container">
+	<a href="#coll" class="btn btn-primary" data-toggle="collapse">상세보기</a>
+
+	<button class="btn btn-secondary" data-toggle="collapse" data-target="#coll1">상세보기1</button>
+
+	<div id="coll" class="collapse">
+		<div class="card card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum iure ab necessitatibus nobis est, excepturi officiis enim harum. Commodi impedit quasi molestiae quisquam perferendis doloribus incidunt, quaerat repellat dolor, voluptatibus error accusantium, in aspernatur pariatur saepe unde illo quis! Iste reiciendis aliquam, temporibus accusantium illum sequi nam quibusdam maiores, esse dolore placeat accusamus eligendi in itaque debitis! Ipsa voluptas ad, labore, beatae deserunt nulla laboriosam! Dicta sint soluta qui totam, culpa vero necessitatibus nisi aut, ea amet aspernatur explicabo repellendus reiciendis hic? Nisi veniam ratione quasi accusantium, nostrum, minima molestiae expedita nihil libero ullam eius consectetur, magnam nam impedit iusto.</div>
+	</div>
+	<div id="coll1" class="collapse">
+		<div class="card card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum iure ab necessitatibus nobis est, excepturi officiis enim harum. Commodi impedit quasi molestiae quisquam perferendis doloribus incidunt, quaerat repellat dolor, voluptatibus error accusantium, in aspernatur pariatur saepe unde illo quis! Iste reiciendis aliquam, temporibus accusantium illum sequi nam quibusdam maiores, esse dolore placeat accusamus eligendi in itaque debitis! Ipsa voluptas ad, labore, beatae deserunt nulla laboriosam! Dicta sint soluta qui totam, culpa vero necessitatibus nisi aut, ea amet aspernatur explicabo repellendus reiciendis hic? Nisi veniam ratione quasi accusantium, nostrum, minima molestiae expedita nihil libero ullam eius consectetur, magnam nam impedit iusto.</div>
+	</div>
+</div>
+
+<!-- nav-bar메뉴 만들기 -->
+<div class="bg-dark">
+	<div class="container">
+		<nav class="navbar navbar-expand-md navbar-dark">
+			
+			<a href="#" class="navbar-brand">LOGO</a>
+			<button type="button" class="navbar-toggler" data-toggle="collapse"data-target="#menu1"><span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="menu1">
+				<ul class="navbar-nav ml-auto">
+					<!-- li.nav-item*3>a.nav-link>{menu$} -->
+					<li class="nav-item">
+						<a href="#!" class="nav-link text-white">menu1</a>
+					</li>
+					<li class="nav-item">
+						<a href="#!" class="nav-link text-white">menu2</a>
+					</li>
+					<li class="nav-item">
+						<a href="#!" class="nav-link text-white">menu3</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</div>
+	
+					
+
+	   
+</body>
+</html>

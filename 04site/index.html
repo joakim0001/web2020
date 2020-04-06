@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>lg기업홈페이지</title>
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.css" >
 
 	
 	
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/wow.js"></script>
 	<script>
 		$(document).ready(function(){
 			$(".slider").bxSlider({
@@ -29,6 +32,41 @@
 				auto:true
 			});
 		});
+		$(document).ready(function(){
+				$(".toggleMenu").click(function(){
+					var myClass = $(this).attr("class");
+					console.log(myClass)
+					if(myClass == "toggleMenu"){
+						$(".toggleMenu").addClass("change");
+							/*$("#main_menu").animate({left:0},300)*/
+							$("#main-menu").stop().animate({left:0},300)
+
+					}else{
+						$(".toggleMenu").removeClass("change");
+							/*$("#main_menu").animate({left:"-100%"},300);*/
+							$("#main-menu").stop().animate({left:"-100%"},300)
+					}
+				});
+					/*$(document).ready(function(){});*/
+				/*$(window).on("resize",function(){});*/
+				$(window).resize(function(){
+					var WSize = $(window).width();
+					console.log(WSize);
+					if(WSize > 960){
+						$("#header_top").find(".toggleMenu").
+							removeClass("change");
+					}else{
+						$("#header_top").find(".toggleMenu").
+							removeClass("change");
+						$("#main-menu").css({left:"-100%"});
+					}
+
+				});
+			
+
+		});
+		
+	
 	</script>
 				
 			
@@ -37,17 +75,23 @@
 <body>
 <header id="main_hd">
 	<div id="header_top" class="clearfix">
-	<h1><a href="#"><img src="images/%EB%A1%9C%EA%B3%A01.png">
+	<h1><a href="#"><img src="images/logo1.png">
 		</a><p>LG</p></h1>
 	<nav id="main-menu">
 		<ul class="clearfix">
 			<li><a href="sub01.html">LG소개</a></li>
-			<li><a href="">CRS</a></li>
-			<li><a href="">IR</a></li>
-			<li><a href="">미디어</a></li>
-			<li><a href="">채용</a></li>
+			<li><a href="sub02.html">CRS</a></li>
+			<li><a href="sub03.html">IR</a></li>
+			<li><a href="sub04.html">미디어</a></li>
+			<li><a href="sub05.html">채용</a></li>
 		</ul>
 	</nav>
+	<div class="toggleMenu">
+	<div class="bar1"></div>
+	<div class="bar2"></div>
+	<div class="bar3"></div>
+	</div>
+	
 		
 	</div>
 	<div class="slider_wrap">
@@ -83,13 +127,13 @@
 				<li class="ct2st" >
 					<a href="#" class="iconlink">
 						<img src="images/mainicon02.png" alt="">
-						<p>전자계열</p>
+						<p>화학계열</p>
 					</a>
 				</li>
 				<li class="ct3st" >
 					<a href="#" class="iconlink">
 						<img src="images/mainicon03.png" alt="">
-						<p>전자계열</p>
+						<p>통신전자</p>
 					</a>
 				</li>
 				<li class="ct4st" >
@@ -366,7 +410,7 @@
 		<ul class="clearfix">
 			<li class="bt_co1ct">
 				<a href="#">
-					<img src="images/로고1.png" alt="로고이미지">
+					<img src="images/logo2.png" alt="로고이미지">
 					<h3>LG</h3>
 				</a>
 

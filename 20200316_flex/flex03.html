@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	
+	<meta charset="UTF-8">
+	<title>flex03</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrap{width: 500px;
+			height: 200px;
+			margin: 0 auto;
+			background-color: skyblue;
+			display: flex;
+			justify-content: flex-end;
+			}
+		.wrap div{flex-grow: 1;
+			justify-content: center;
+			display: flex;
+			align-items: center;
+			background-color: orange;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<!-- div.box$*5>{box0$} -->
+		<div class="box1">box01</div>
+		<div class="box2">box02</div>
+		<div class="box3">box03</div>
+		<div class="box4">box04</div>
+		<div class="box5">box05</div>
+	</div>
+</body>
+</html>

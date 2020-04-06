@@ -1,0 +1,25 @@
+{
+	"book":[
+		{
+			"title":"타인의 해석",
+			"author":"말콤 글래드웰",
+			"bookimg":"img01.jpg",
+			"price":"20,000",
+			"href":"http://www.naver.com"
+		},
+		{
+			"title":"타인의 해석",
+			"author":"벤 올린",
+			"bookimg":"img02.jpg",
+			"price":"20,000",
+			"href":"http://www.naver.com"
+		},
+		{
+			"title":"배심원단",
+			"author":"마이클 코널리",
+			"bookimg":"img03.jpg",
+			"price":"20,000",
+			"href":"http://www.naver.com"
+		}
+	]
+}

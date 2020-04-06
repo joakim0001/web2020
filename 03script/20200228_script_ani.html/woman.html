@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>woman</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	
+	<script>
+	$(function(){
+		
+
+		$(window).scroll(function(){
+		var wintop = $(this).scrolltop();
+		if(wintop > 300){
+			$(".womanwrap").addClass("animate");
+		}else{
+			$(".womanwrap").removeClass("animate");
+		}
+		});
+
+	});
+	</script>
+	<style>
+		body{}
+		
+		.womanwrap{width: 114px;
+			height: 24px;
+			position: relative;
+			left: 200px;
+			animation:bounce 1s infinite alternate;}
+			
+		@keyframes bounce{
+				50%{transform: translateX(10px) translateY(10px);}
+			}
+		
+		.womanwrap > div{position: absolute;}
+		
+		.womanwrap div.body{z-index: 2;}
+		
+		.womanwrap div.arm1{
+			top: 100px;left: -20px;
+			animation:aRight 1s linear infinite alternate;
+			transform-origin:80px 20px; z-index: 3;}
+
+		@keyframes aRight{
+				from{transform: rotate(20deg)}
+				to{transform: rotate(-40deg)}
+			}
+
+		.womanwrap div.arm2{
+			top: 100px;left: -20px;
+			animation:aleft 1s linear infinite alternate;
+			transform-origin:80px 20px;
+			z-index: 1;}
+
+		@keyframes aleft{
+			from{transform: rotate(-40deg)}
+			to{transform: rotate(20deg)}
+			}	
+		.womanwrap div.foot1{
+			top: 210px;left: -5px;
+			animation:fRight 1s linear infinite alternate;
+			transform-origin:23px 34px;z-index: 1}
+
+		@keyframes fRight{
+				from{transform: rotate(-40deg)}
+				to{transform: rotate(20deg)}
+			}
+		
+		.womanwrap div.foot2{
+			top: 210px;left: -5px;
+			animation:fleft 1s linear infinite alternate;
+			transform-origin:23px 34px;z-index: 1;
+			}
+
+		@keyframes fleft{
+			from{transform: rotate(20deg)}
+			to{transform: rotate-40deg)}
+			}
+
+		.woman.animate .womanwrap{animation:circle 1s linear infinite forwards;}
+
+
+
+		.woman2{width: 114px;
+			height: 24px;
+			position: relative;
+			left:  400px;
+			animation:bounce 1s infinite alternate;}
+			
+		@keyframes bounce{
+				50%{transform: translateX(10px) translateY(10px);}
+			}
+
+
+		
+		.woman2{}
+		
+		
+		.woman2 > div{position: absolute;}
+		
+		.woman2 div.body{z-index: 2;}
+		
+		.woman2 div.arm1{
+			top: 100px;left: -20px;
+			animation:aRight 1s linear infinite alternate;
+			transform-origin:80px 20px; z-index: 3;}
+
+		@keyframes aRight{
+				from{transform: rotate(20deg)}
+				to{transform: rotate(-40deg)}
+			}
+
+		.woman2 div.arm2{
+			top: 100px;left: -20px;
+			animation:aleft 1s linear infinite alternate;
+			transform-origin:80px 20px;
+			z-index: 1;}
+
+		@keyframes aleft{
+			from{transform: rotate(-40deg)}
+			to{transform: rotate(20deg)}
+			}	
+		.woman2 div.foot1{
+			top: 210px;left: -5px;
+			animation:fRight 1s linear infinite alternate;
+			transform-origin:23px 34px;z-index: 1}
+
+		@keyframes fRight{
+				from{transform: rotate(-40deg)}
+				to{transform: rotate(20deg)}
+			}
+		
+		.woman2 div.foot2{
+			top: 210px;left: -5px;
+			animation:fleft 1s linear infinite alternate;
+			transform-origin:23px 34px;z-index: 1;
+			}
+
+		@keyframes fleft{
+			from{transform: rotate(20deg)}
+			to{transform: rotate(-40deg)}
+			}	
+	
+
+		
+	</style>
+</head>
+<body>
+	<div style="height: 500px;"></div>
+		<div class="woman animate">
+			<div class="womanwrap">
+				<div class="body"><img src="../../img/body01.png" alt=""></div>
+				<div class="arm1"><img src="../../img/arm01.png" alt=""></div>
+				<div class="arm2"><img src="../../img/arm01.png" alt=""></div>
+				<div class="foot1"><img src="../../img/foot01.png" alt=""></div>
+				<div class="foot2"><img src="../../img/foot02.png" alt=""></div>
+			</div>
+		</div>
+
+	<div class="woman2 animate">
+			<div class="body"><img src="../../img/body01.png" alt=""></div>
+			<div class="arm1"><img src="../../img/arm01.png" alt=""></div>
+			<div class="arm2"><img src="../../img/arm01.png" alt=""></div>
+			<div class="foot1"><img src="../../img/foot01.png" alt=""></div>
+			<div class="foot2"><img src="../../img/foot02.png" alt=""></div>
+	</div>
+<div style="height: 1000px;"></div>
+		
+	
+</body>
+</html>

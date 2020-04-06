@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>myfullpage</title>
+	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/wow.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$("#fullpage").fullpage({
+				anchors:["1st","2st","3st","4st","5st","6st"],
+				menu:"#topMenu",
+				navigation:true,
+				slideNavigation:true,
+				afterLoad:function(anchorslink,index){
+					console.log(anchorslink+","+index);
+					
+					if(index == 2){
+						$("#onView").addClass("move");
+					}else{
+						$("#onView").removeClass("move");
+					}
+				}
+			});
+			
+			$(window).resize(function(){
+				sHeight();
+			});
+			function sHeight(){
+				var sliderHeight = $(window).height();
+				$(".slider1").height(sliderHeight);
+			}
+			sHeight();
+			$(".sliderWrap").bxSlider({pager:false});
+		});
+		$(document).ready(function(){
+			
+			$(".slider2").bxSlider({
+				pager:false,
+				auto:true
+			});
+			
+		});
+	</script>
+	
+	
+</head>
+			
+<body>
+	<!--메뉴시작-->
+		<nav id="navTop">
+			<ul id="topmenu" class="clearfix">
+				<li data-menuanchor="2st"><a href="#2st">동굴소개</a></li>
+				<li data-menuanchor="3st"><a href="#3st">동굴 속 여행</a></li>
+				<li data-menuanchor="4st"><a href="#4st">문화행사</a></li>
+				<li data-menuanchor="5st"><a href="#5st">동굴 밖 볼거리</a></li>
+				<li data-menuanchor="6st"><a href="#6st">예약예매</a></li>
+			</ul>
+		</nav>
+	<!--메뉴끝-->
+	
+	<!--fullpage시작-->
+	
+	
+		<div id="fullpage">
+		<!--page1 intro시작-->
+			<div class="section page" id="page1" data-anchor="1st">
+				<div id="intro">
+					<div class="intro-top">
+						<div class="logo">
+							<a href=""><img src="img/logo.png" alt="">
+								<h2>광명동굴</h2>
+							</a>
+						</div>
+					</div>
+					<div class="sc1">
+						<img src="img/intro-gr01.png" alt="구름이미지" class="gr1">
+						<img src="img/intro-gr02.png" alt="구름이미지" class="gr2">
+						<img src="img/intro-sa01.png" alt="새이미지" class="s1">
+						<img src="img/intro-sa02.png" alt="새이미지" class="s2">
+						<img src="img/intro-gr03.png" alt="구름이미지" class="gr3">
+						<div class="sc1ani">
+							<div class="car1"><img src="img/intro_car01.png" alt=""></div>
+							<div class="car2"><img src="img/intro_car02.png" alt=""></div>
+							<div class="kurz1"><img src="img/intro-kurz1.png" alt=""></div>
+							<div class="kurz2"><img src="img/intro-kurz2.png" alt=""></div>
+						</div>
+					</div>	
+					
+						
+					<div class="sc2">
+						<div class="csimg">
+							<img src="img/intro_1.png" alt="">
+						</div>
+						<h3>광명동굴</h3>
+
+					</div>
+							
+					<div class="sc3">
+						<ul class="clearfix">
+							<li><a href=""><img src="img/intro_iconimg01.png" alt=""></a></li>
+							<li><a href=""><img src="img/intro_iconimg02.png" alt=""></a></li>
+							<li><a href=""><img src="img/intro_iconimg03.png" alt=""></a></li>
+							<li><a href=""><img src="img/intro_iconimg04.png" alt=""></a></li>
+						</ul>
+					</div>
+					
+					<div class="sc4">
+						<ul class="clearfix">
+							<li><a href=""><img src="img/intro_snsicon01.png" alt=""></a></li>
+							<li><a href=""><img src="img/intro_snsicon02.png" alt=""></a></li>
+							<li><a href=""><img src="img/intro_snsicon03.png" alt=""></a></li>
+							<li><a href=""><img src="img/intro_snsicon04.png" alt=""></a></li>
+						</ul>
+						<p> <strong>문의 : 02-2610-2010</strong><br>(광명도시공사 테마파크팀)</p>
+					</div>
+						
+					<div class="sc5">
+						<h3><a href="" class="gg">공지사항</a></h3>
+						<a href="" class="ps"><img src="img/intro_plusicon.png" alt=""></a>
+						<ul>
+							<li><a href="">
+									● 광명동굴 임시휴장 연장안내
+								</a></li>
+							<li><a href="">
+									● 광명동굴 공휴일 운영안내
+								</a></li>
+							<li><a href="">
+									● 광명동굴 겨율대축제
+								</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		<!--page1 intro끝-->
+							
+		<!--page2 main1시작-->
+			<div class="section page" id="page2" data-anchor="2st">
+				<div class="pg2_sc1">
+					<ul>
+						<li><img src="img/main1-dg2.gif" alt=""></li>
+						<li><img src="img/main1-db3.gif" alt=""></li>
+					</ul>
+						
+					<div class="dg1">
+						<img src="img/main1-dg1.png" alt="">
+					</div>
+				</div>
+				<div class="pg2_sc2">
+					<ul>
+						<li><img src="img/main1-dg4.png" alt=""></li>
+						<li><img src="img/main1-dg5.png" alt=""></li>
+					</ul>
+				</div>
+				<div class="main" id="onView">
+				<h3>폐광의 기적! "광명동굴"</h3>
+				<p>광산 시작년도 : 1912년<br>광산 폐광년도 : 1972년<br>
+				채광물질 : 금,은,동,아연 등<br>갱도길이 : 7.8Km(개방 2km)<br>
+				갱도층수 : 0레벨 ~ 지하7레벨(총8레벨)<br>총 깊 이 : 275</p>
+				<a href="#">보러가기</a>
+			</div>
+				<div class="scroll">
+					<a href="#3st"><img src="img/icons-bt1.png" alt=""></a>
+				</div>
+					
+				
+		</div>
+		<!--page2 main1끝-->
+		
+		<!--page3 main2시작-->	
+			<div class="section page" id="page3" data-anchor="3st">
+				<div class="pg3_content1">
+					<img src="img/main2_dg1.png" alt="">	
+				</div>
+				<div class="pg3_top ">
+					<ul>
+						<li><img src="img/main2-bb1.gif" alt=""></li>
+						<li><img src="img/main2-bb2.gif" alt=""></li>
+					</ul>
+				</div>
+				<div class="pg3_bt">
+					<ul>
+						<li><img src="img/main2-dg1.gif" alt=""></li>
+						<li><img src="img/main2-dg2.gif" alt=""></li>
+					</ul>
+				</div>
+				<div class="gy">
+					<div class="img"><p style="display: block">
+						<img src="img/main2-slider1.png" alt=""></p>
+						<p><img src="img/main2-slider2.png" alt=""></p>
+						<p><img src="img/main2-slider3.png" alt=""></p>
+						<p><img src="img/main2-slider4.png" alt=""></p>
+						<p><img src="img/main2-slider5.png" alt=""></p>
+						<p><img src="img/main2-slider6.png" alt=""></p>
+						<p><img src="img/main2-slider1.png" alt=""></p>
+						<p><img src="img/main2-slider2.png" alt=""></p>
+						<p><img src="img/main2-slider3.png" alt=""></p>
+						<p><img src="img/main2-slider4.png" alt=""></p>
+						<p><img src="img/main2-slider5.png" alt=""></p>
+						<p><img src="img/main2-slider6.png" alt=""></p>
+						<p><img src="img/main2-slider1.png" alt=""></p>
+						<p><img src="img/main2-slider2.png" alt=""></p>
+						<p><img src="img/main2-slider3.png" alt=""></p>
+						<p><img src="img/main2-slider4.png" alt=""></p>
+						<p><img src="img/main2-slider5.png" alt=""></p>
+						<p><img src="img/main2-slider6.png" alt=""></p>
+					</div>
+					<div class="tb">
+						<div class="left" class="clearfix">
+							<img src="img/icons-left.png" alt="">
+						</div>
+						<div class="ct">
+							<ul class="clearfix">
+								<li class="tb m0">근대역사관</li>
+								<li class="tb">황금동굴</li>
+								<li class="tb">빛의광장</li>
+								<li class="tb">물의세계</li>
+								<li class="tb">지하세계</li>
+								<li class="tb">와인동굴</li>
+								
+								<li class="tb m0">근대역사관</li>
+								<li class="tb">황금동굴</li>
+								<li class="tb">빛의광장</li>
+								<li class="tb">물의세계</li>
+								<li class="tb">지하세계</li>
+								<li class="tb">와인동굴</li>
+								
+								<li class="tb m0">근대역사관</li>
+								<li class="tb">황금동굴</li>
+								<li class="tb">빛의광장</li>
+								<li class="tb">물의세계</li>
+								<li class="tb">지하세계</li>
+								<li class="tb">와인동굴</li>	
+							</ul>
+						</div>
+						<div class="right">
+							<img src="img/icons-right.png" alt="">
+						</div>	
+								
+					</div>
+				</div>
+						
+				
+				
+				<div class="scroll">
+					<a href="#4st"><img src="img/icons-bt1.png" alt=""></a>
+				</div>
+			</div>
+		<!--page3 main2끝-->
+			
+		<!--page4 main3시작-->
+			<div class="section page" id="page4" data-anchor="4st">
+				
+				<div class="pg4_ct1">
+					<ul>
+						<li><img src="img/main3-bh1.png" alt=""></li>
+						<li><img src="img/main3-skygirls.gif" alt=""></li>
+						<li><img src="img/main3-scgirl1.png" alt=""></li>
+						<li><img src="img/main3-rightps2.png" alt=""></li>
+						<li><img src="img/main3-rightps1.png" alt=""></li>
+					</ul>	
+				</div>
+				<div class="pg4_ct2">
+					<ul>
+						<li><img src="img/main3-leftps1.png" alt=""></li>
+						<li><img src="img/main3-leftps3.png" alt=""></li>
+						<li><img src="img/main3-leftps2.png" alt=""></li>
+					</ul>
+				</div>
+							
+						
+						
+				<div class="pg4_dg">
+					<img src="img/main3-dg1.png" alt="">
+				</div>
+				<div class="pg4_cs3">
+					<ul>
+						<li><img src="img/MAIN3_ms1.png" alt=""></li>
+						<li><img src="img/main3_caliter2.png" alt=""></li>
+						<li><img src="img/main3_caliter1.png" alt=""></li>
+						<li><img src="img/main3-crt1.gif" alt=""></li>
+					</ul>
+				</div>
+				<div class="slider_pg4wrap">
+					<ul class="slider2">
+						<li class="pg4slide_1st">
+							<a href="">
+								<img src="img/main3_slide1.png" alt="레인보우이미지">
+									<div class="txts">
+										<h3>감성과 상상을 자극하는<br>빛의 놀이터 레인보우 </h3>
+									</div>
+							</a>
+							
+						</li>
+						<li class="pg4slide_2st">
+							<a href="">
+								<img src="img/main3_slide2.png" alt="미이더사파이드쇼이미지">
+									<div class="txts">
+										<h3>예술의 전당에서 펼쳐지는<br>미디어파사드쇼!</h3>
+									</div>
+							</a>
+							
+						</li>
+						<li class="pg4slide_3st">
+							<a href="">
+								<img src="img/main3_slide3.png" alt="타임캡슐관이미지">
+									<div class="txts">
+										<h3>광명동굴 타임캡슐관<br>"과거의 기억,현재의 삶,<br>미래의 꿈"</h3>
+									</div>
+							</a>
+						</li>
+						<li class="pg4slide_4st">
+							<a href="">
+								<img src="img/main3_slide4.png" alt="좀비이미지">
+									<div class="txts">
+										<h3>공포체험관 좀비캐슬<br>진정한 공포를 체험</h3>
+									</div>
+							</a>
+						</li>
+						<li class="pg4slide_5st">
+							<a href="">
+								<img src="img/main3_slide5.png" alt="">
+									<div class="txts">
+										<h3>광명동굴 소믈리에와 <br>함께 하는 와인캐슬</h3>
+									</div>
+							</a>
+						</li>
+						
+					</ul>
+					
+				</div>
+				<div class="pg4-txt">
+					<h3>광명동굴 축제 문화행사!</h3>
+			    </div>
+				<div class="scroll">
+					<a href="#5st"><img src="img/icons-bt1.png" alt=""></a>
+				</div>
+			</div>
+				
+		<!--page4 main3끝-->
+			
+		<!--page5 main4시작-->
+			<div class="section page" id="page5" data-anchor="5st">
+				<div class="pg5_sc1">
+					<ul>
+						<li><img src="img/main4-leftimg1.png" alt=""></li>
+						<li><img src="img/main4-rightimg1.png" alt=""></li>
+					</ul>
+				</div>
+				<div class="scroll">
+					<a href="#6st"><img src="img/icons-bt1.png" alt=""></a>
+				</div>
+			</div>
+			
+		<!--page5 main4끝-->
+		
+		<!--page6 main5시작-->
+			<div class="section page" id="page6" data-anchor="6st">
+				<div class="scroll">
+					<a href="#2st"><img src="img/icons-bt1.png" alt=""></a>
+				</div>
+			</div>
+		<!--page6 main5끝-->
+		
+		<!--page7 footer시작-->
+				
+			<div class="section page fp-auto-height" id="page7" data-anchor="7st"></div>
+		<!--page7 footer끝-->
+
+		
+
+		
+		</div>
+	
+</body>
+</html>
+
+	
+	
+					
+
+				
+			
+	
+
+
+
+
+
+
+
+
+
+
+
+

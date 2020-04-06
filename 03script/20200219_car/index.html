@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>car</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		#panel{width: 600px;
+			height: 300px;
+			border: 1px solid #000;
+			position: relative;
+			margin:auto;}
+
+
+		.bar{width: 500px;
+			height:50px;
+			background-color: #f00;
+			position: absolute;
+			left: 50px;top: 190px;}
+
+		#car{position: absolute;left: 50px;top: 170px;}
+		.rotate{transform: rotateY(180deg);}
+		
+		.bar1{width: 500px;
+			height: 50px;
+			background-color: blue;
+			position: absolute;
+			left: 50px;top: 120px;}
+		#car1{position: absolute;right:50px;top: 90px;transform: rotateY(180deg);}
+		.rotate1{transform: rotateY(0deg)!important;}
+		
+
+
+	</style>
+	<script>
+		$(function(){
+			var objBar = $(".bar");
+			var objCar = $("#car");
+			var objBar1 = $(".bar1");
+			var objCar1 = $("#car1");
+			var nStart = objBar.position().left;
+			var nEnd = nStart + objBar.width() - objCar.width();
+
+			var nStart = objBar1.position().left;
+			var nEnd = nStart + objBar1.width() - objCar1.width();
+			var nStep = 2;
+			var nCurrent = nStart;
+			var nTimerId = 0;
+			console.log("시작위치 : "+nStart+", 끝위치 : "+nEnd);
+
+
+			function move(){
+			/*nCurrent = nCurrent +nStep;   nCurrent += nStep와 동일사용*/
+			nCurrent += nStep;
+
+			if(nCurrent > nEnd){
+				nStep=-2;
+				objCar.addClass("rotate");
+				objCar1.addClass("rotate1");
+				
+			}
+			if(nCurrent<nStart){
+				nStep =2;
+				objCar.removeClass();
+				objCar1.removeClass();
+				
+			}
+
+			/*console.log(nCurrent);*/
+			objCar.css("left",nCurrent);
+			objCar1.css("right",nCurrent);
+		
+		}
+	   /* 	setInterval(move,10);자동으로 실행하게하는 것 setInterval*/
+	   $(".btn_start").click(function(){   /*중복클릭방지*/
+	   	if(nTimerId == 0){
+	   		nTimerId = setInterval(move,30);   
+	   		}
+	   		console.log(nTimerId);
+	   });
+	    $(".btn_stop").click(function(){
+	    	if(nTimerId != 0){
+	   		clearInterval(nTimerId);
+	   		nTimerId = 0;
+	   		}
+	   });
+
+		});
+	</script> 
+</head>
+<body>
+	<div id="panel">
+
+		<div class="bar"></div>
+		<div id="car"><img src="../../img/car.png" alt=""></div>
+		<div class="bar1"></div>
+		<div id="car1"><img src="../../img/car.png" alt=""></div>
+	
+
+		
+	</div>
+	<button class="btn_start">시작</button>
+	<button class="btn_stop">정지</button>
+
+</body>
+</html>

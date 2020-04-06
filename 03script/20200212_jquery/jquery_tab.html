@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	
+	<meta charset="UTF-8">
+	<title>tabs</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		.contentWrap{width: 1000px;margin: 0 auto;}
+		.contentWrap li{float: left;
+			width: 20%;
+			text-align: center;
+			line-height: 40px;
+			border: 1px solid #000;}
+		.contentWrap li:hover{background-color: skyblue;}
+		.contentWrap li.active{background-color: orange;color: white;}
+		.contentWrap .contentTxt{border: 1px solid #000;}
+		.contentWrap .contentTxt div{padding: 30px;display: none;}
+		.contentWrap .contentTxt div:first-child{display: block;}
+
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".contentWrap > ul >li").click(function(){
+				 var liNum = $(this).index();
+				 console.log("liNum");
+				 $(".contentWrap>ul>li").removeClass();
+				 $(this).addClass("active");
+				/*$(".contentWrap>ul>li").eq(liNum).addClass("active");*/
+				$(".contentTxt>div").hide();
+			/*	$(".contentTxt>div").eq(liNum).show();*/
+				$(".contentTxt>div").eq(liNum).fadeIn();  /*애니메이션 기능으로 나타날때 표현됨*/
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<div class="contentWrap">
+		<ul class="clearfix">
+			<li class="active">menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+		</ul>
+		<div class="contentTxt">
+			<div>1.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus enim nesciunt maiores, sed consectetur natus repudiandae officiis. Magnam, vel ducimus nihil commodi odio quam. Facere cumque natus ex magni error.</div>
+			<div>2.Eos illo id provident quis eaque rerum possimus similique facilis explicabo inventore adipisci mollitia, est odio, aspernatur eligendi beatae repellat porro quae, officiis ipsa accusamus aliquid obcaecati culpa qui! Sequi!</div>
+			<div>3.Doloribus magni recusandae nam quisquam, accusamus eaque, natus sunt odio! Libero rerum atque, autem? Velit, officia eum laborum incidunt nesciunt, expedita quae sapiente magnam, architecto reiciendis rerum dolores! Ad, corporis.</div>
+			<div>4.Inventore dolore est asperiores nulla, corporis deserunt omnis expedita. Distinctio quod molestiae similique culpa cum, reiciendis laboriosam consequuntur eos suscipit iure quo quisquam, minima enim quos inventore, fuga dolor, corporis!</div>
+			<div>5.Voluptatibus provident molestiae assumenda, iste qui maiores in illo perspiciatis, dolor ipsum accusamus, architecto ipsa mollitia aliquid. Id facere nesciunt officia, quis dolor repellendus itaque sit molestias corporis quasi velit.</div>
+		</div>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>ajax</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$.getJSON('book.json',function(data){
+				var books = data.book;
+				$(books).each(function(i,obj){
+					var title = obj.title;
+					var img = obj.bookimg;
+					var href =obj.href;
+
+					var txt="";
+						txt += "<li>";
+						txt += "<a href='"+href+"' target='_blank'> <img src='img/"+img+"'></a>";
+
+						txt += "<div class='txt'>"+title+"</div>";
+						txt += "</li>"; 
+						$(".han").append(txt);
+					}); 
+				});
+
+		});
+</script>
+<style>
+	*{margin: 0; padding: 0;box-sizing: border-box;}
+li{list-style: none;}
+a:visited,a:link{
+	text-decoration:none; 
+	color:black;}
+.clearfix:after{
+	content:"";
+	display: block;
+	clear: both;}
+
+		.wrap{width: 500px;height: 220px;margin: 0 auto;background-color:skyblue;}
+		ul>li{float: left;width:25%;position: relative;cursor:pointer;transition:0.3s; overflow:hidden;}
+		ul>li>img{width: 140px;height: 200px;display:block;transition:0.3s}
+		
+		.bg-black{background-color: orange; opacity:0;position: absolute;width: 100%;height: 100%;top: 0;left: 0;transition:0.3s;}
+		
+		.han txt{position: absolute;width: 100%;height: 100%;
+		display:flex;
+		justify-content:center;
+		align-items:center;top:0;left:0;
+		color:white;font-weight:bold;}
+
+	
+		li:hover img{transform:scale(1.2)}
+		li:hover .bg-black{opacity:0.5;}
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<ul class="han"></ul>
+	</div>
+</body>
+</html>
+	

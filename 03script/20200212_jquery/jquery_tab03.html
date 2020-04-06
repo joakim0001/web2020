@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>tab연습</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		.contentwrap{width: 1000px;margin: 0 auto;}
+		.contentwrap li{float: left;height: 50px;width: 20%;line-height: 50px;
+			text-align: center;border: 1px solid #000;}
+		.contentwrap li:hover{background-color: red}
+		.contentwrap li.active{background-color: blue; color: white;}
+		.contentwrap .content_txt{border: 1px solid #000;width: 1000px;margin:0 auto;} 
+		.contentwrap .content_txt div{padding: 30px;display: none;}
+		.contentwrap .content_txt div:first-child{display: block;}
+		
+
+	</style>
+	<script>
+		$(document).ready(function(){
+				var liNum = $(this).index();
+			$(".contentwrap > ul >li").click(function(){
+				console.log("liNum");
+				$(".contentwrap > ul>li").removeClass();
+				$(this).addClass("active");
+				$(".content_txt>div").hide();
+				$(".content_txt>div").eq(liNum).fadeIn();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="contentwrap">
+		<ul class="clearfix">
+			<li class="active">menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+		</ul>
+	</div>
+	<div class="content_txt">
+		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, ducimus..</div>
+		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, ducimus..</div>
+		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, ducimus..</div>
+		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, ducimus..</div>
+		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, ducimus..</div>
+	</div>
+</body>
+</html>

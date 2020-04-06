@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>scrollmenu</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script src="../../js/jquery.mousewheel.min.js"></script>
+	<style>
+		nav.menu{background-color: #cbcbcb;width: 100%;transition: 0.3s}
+		nav.menu.fixed{position: fixed;top: 0;background-color: #000;}
+		nav.menu.fixed a{color: #fff;}
+		nav.menu ul li{float: left;width: 20%;}
+		nav.menu ul li a{display: block;line-height: 40px;text-align: center;}
+		.contents{height: 3000px;}
+	</style>
+	<script>
+		$(function(){
+			/*$(window).scroll(function(){
+				var winTop = $(window).scrollTop();
+			
+				if(winTop>100){
+					$(".menu").addClass("fixed");
+				}else{
+					$(".menu").removeClass("fixed")
+				}
+			});*/
+			$(document).mousewheel(function(e,delta){
+				console.log(delta);
+				$(window).scroll(function(){
+					var winTop = $(this).scrollTop();
+
+					if(winTop>100){
+						if(delta>0){
+							$(".menu").addClass("fixed");
+						}else{
+							$(".menu").removeClass("fixed");
+						} 
+
+					}else{
+						$(".menu").removeClass("fixed");
+					} 
+				});   
+			});
+
+		});
+	</script>
+
+</head>
+<body>
+	<div class="wrap">
+		<nav class="menu">
+			<ul class="clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</nav>
+		<div class="contents">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus dolores sed nobis sit pariatur eveniet accusantium tempore debitis id eligendi ratione quam illo consectetur ad nisi quia, soluta quis in distinctio totam maxime perspiciatis. Cupiditate explicabo tempore quo eligendi sunt dicta et voluptate iure labore obcaecati minus tempora temporibus odio tenetur repellat beatae ullam, doloribus! Similique, nobis, totam! Optio quae quisquam facere. Vero quaerat tempora alias dolor provident, asperiores inventore eligendi, itaque facere explicabo nihil laudantium veniam, officia libero. Enim nemo ea similique hic deserunt maiores ducimus veritatis numquam, incidunt facilis dignissimos dicta recusandae esse quas culpa cumque. Corporis, tenetur.</div>
+	</div>
+</body>
+</html>

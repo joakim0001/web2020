@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>modal01</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("body").append("<div id='glayLayer'></div>");
+			$("a.modal").click(function(e){
+				var aHref = $(this).attr("herf");
+				console.log(aHref);
+				$("#glayLayer").show();
+				$("#overLayer").show().html("<img src='" + aHref +"'>");
+				return false;
+			});
+			$("#glayLayer,#overLayer").click(function(){
+				$("#glayLayer").hide();
+				$("#overLayer").hide();
+			});
+			$(".mg2").colorbox({
+				rel:"mg2"
+			});
+			$(".ytb").colorbox({
+				iframe:true,
+				innerWidhth:600,
+				innerHeight:338,
+			});
+
+		});
+	</script>
+
+	<style>
+		#glayLayer{position: fixed;width: 100%;height: 100%;background-color: #000;left: 0;top: 0;opacity: 0.6;display: none;}
+		#overLayer{position: fixed;top: 50%;left: 50%;transform: translate(50%,50%);display: none;}
+		ul>li{float: left;width: 35%;}
+	</style>
+
+</head>
+<body>
+	<ul>
+		<li>
+			<a href="../../img/apple.png" class="modal">
+				<img src="../../img/banana.png" alt=""></a>
+		</li>
+		<li>
+			<a href="../../img/img4.jpg" class="modal">
+				<img src="../../img/img1.jpg" alt=""></a>
+		</li>
+		<li>
+			<a href="../../img/img5.jpg" class="modal">
+				<img src="../../img/img6.jpg" alt=""></a>
+		</li>
+		<li>
+			<a href="../../img/img7.jpg" class="modal">
+				<img src="../images/tourgallery_j1.jpg" alt=""></a>
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<a href="../../img/apple.png" class="mg1">
+				<img src="../../img/banana.png" alt=""></a>
+		</li>
+		<li>
+			<a href="../../img/img4.jpg" class="mg1">
+				<img src="../../img/img1.jpg" alt=""></a>
+		</li>
+		<li>
+			<a href="https://www.youtube.com/embed/_c3wvn8hX6Q" class="ytb">
+				<img src="../../img/img6.jpg" alt=""></a>
+		</li>
+		<li>
+			<a href="https://www.youtube.com/embed/_c3wvn8hX6Q" class="ytb">
+				<img src="../images/tourgallery_j1.jpg" alt=""></a>
+		</li>
+	</ul>
+			
+
+</body>
+</html>

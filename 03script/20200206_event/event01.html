@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	
+	<meta charset="UTF-8">
+	<title>event</title>
+	<script>
+		
+	
+		function init(){
+			var p = document.getElementById("p");
+			var div = document.getElementById("div");
+			
+			
+			p.onmouseover = over;     /*함수를 직접 선택하여 불러와서 활용하는 방법*/
+		
+
+			p.onmouseout =function(){   
+				/*p.style.backgroundColor="white";*/       /*무명함수를 불러와서 활용하는 방법*/
+				this.style.backgroundColor = "white";  /*this로 활용하는 방법*/ 
+			};
+
+			div.addEventListener("click",overDiv);
+			div.addEventListener("mouseout",
+				function(){
+						div.style.backgroundColor="white";
+				}
+
+				);
+ 
+		}
+		
+		function over(){
+			p.style.backgroundColor = "orchid";
+		}
+		
+		function out(){
+			p.style.backgroundColor = "white";
+		}
+		function overDiv(){
+			div.style.backgroundColor ="skyblue";
+		}
+		/*function outDIv(){
+			div.style.backgroundColor ="white";
+		}*/
+	</script>
+</head>
+<body onload="init()">
+	<h3>Lorem ipsum dolor.</h3>
+	<hr>
+	<p id="p">Lorem ipsum dolor sit amet, consectetur 
+	adipisicing elit. Tempora, doloribus.</p>
+	<div id="div">Lorem ipsum dolor sit amet.</div>
+</body>
+</html>

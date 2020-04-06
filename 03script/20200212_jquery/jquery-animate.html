@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>animate</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$("btn1").click(function(){
+				$("img").animate({width:100},300);
+			});
+			
+			$("btn2").click(function(){
+				$("img").animate({width:200},300);
+			});
+			$("btn3").click(function(){
+				$("img").animate({width:300},300);
+		});
+	});
+	</script>
+
+	<style>
+		img{display: block;}
+	</style>
+</head>
+<body>
+	<div style="blcok;position: absolute;">
+		<button class="btn1">가로100</button>
+		<button class="btn2">가로100</button>
+		<button class="btn3">가로100</button>
+	</div>
+	<img src="../../img/testimg.jpg" alt="">
+</body>
+</html>

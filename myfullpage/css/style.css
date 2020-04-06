@@ -1,0 +1,516 @@
+@charset "utf-8";
+
+/*navemenu시작*/
+#navTop{position:fixed;
+	z-index: 2;
+	width: 1200px; 
+	height: 70px;
+	background-color: rgba(59, 0, 217, 0.58);
+	left: 18%;
+	top:0px;}
+#navTop ul{}
+#navTop li{float: left;width: 20%;}
+#navTop li a{display: block;
+	line-height: 70px;
+	text-align: center;
+	padding: 0 10px;color: white;
+	font-size: 1.8em;
+	text-shadow: 0 1px 2px black;}
+
+/*navemen끝*/
+
+/*fullpage시작*/
+
+/* page1 intro시작*/
+#intro{width: 100%;
+	height: 100%;
+	background-image: url(../img/intro_bgc.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;}
+
+.intro-top{top: 30px;
+	position: absolute;
+	left:  200px;}
+.intro-top h2{margin-top: -90px;
+	margin-left:120px;
+	font-size: 2.4em;
+	color: white;
+	text-shadow: 0 2px 2px black;}
+
+.sc1{position: absolute;}
+.sc1 .gr1{position: absolute;
+	top: 70px;
+	display: block;left: 80px;
+	animation-name: myani;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+	animation-duration: 4s;}
+@keyframes myani{from{
+	top:  130px; left: 80px;}
+	to{top:70px;left:150px;}}
+
+.sc1 .gr2{position: absolute;
+	display: block;top: 20px;
+	left: 280px;
+	animation-name: myani1;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+	animation-duration: 4s;}
+@keyframes myani1{from{
+	top: 20px; left:630px;}
+	to{top:40px;left:650px;}}
+
+.sc1 .gr3{position: absolute;
+	display: block;top: 50px;
+	right: 250px;
+	animation-name: myani2;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+	animation-duration: 7s;}
+@keyframes myani2{from{
+	top: 150px; left:1780px;}
+	to{top:50px;left:1600px;}}
+
+.sc1 .s1{position: absolute;
+	top: 50px;display: block;
+	right: 250px;
+	animation-name: myani3;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+	animation-duration: 15s;}
+@keyframes myani3{from{
+	top: 150px; left:250px;}
+	to{top:80px;left:650px;}}
+
+.sc1 .s2{position: absolute;top: 50px;
+	display: block;
+	left: 1450px;
+	animation-name: myani4;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+	animation-duration: 15s;}
+@keyframes myani4{from{
+	top: 30px; left:250px;}
+	to{top:150px;right:700px;}}
+
+.sc1 .sc1ani{position: absolute;top: 360px;}
+
+.car1{position: absolute;
+	margin-top: -75px;
+	left: 20px;
+animation: car1 15s infinite alternate linear;}
+@keyframes car1{
+	from{left:20px;}
+	to{left:1920px;}}
+
+.car2{position: absolute;
+	left:1720px;
+	margin-top: -95px;
+animation: car2 10s infinite alternate linear;}
+@keyframes car2{
+	from{left:1720px;}
+	to{left:20px;}}
+
+.kurz1{position: absolute;left:35px;transform: rotateY(180deg);margin-top: -30px;
+animation: kurz1 55s infinite alternate linear;}
+@keyframes kurz1{
+	from{left:35px;}
+	to{left:1920px;}}
+
+.kurz2{position: absolute;left: 1920px;margin-top: 5px;
+animation: kurz2 5s infinite alternate linear;}
+@keyframes kurz2{
+	from{left:1920px;}
+	to{left:0px;}}
+
+/*sc2영역*/
+.sc2{width: 100%;
+	position: absolute;}
+.sc2 .csimg{position: absolute; 
+	width: 100%;
+	margin-top: 160px;}
+
+.sc2 h3{position: absolute;
+	margin-top: 240px;
+	font-size: 2.6em;
+	color: white; 
+	text-shadow:  0 2px 2px black;left: 970px}
+
+/*sc3영역*/
+.sc3{position: relative;
+	width: 1200px;
+	top: 380px;left: 25%}
+.sc3>ul{}
+.sc3>ul>li{float: left;text-align: center;transform: 0.3s}
+.sc3>ul>li:hover{transform: translate(-20px, -20px);}
+
+/*sc4영역*/
+.sc4{position: absolute;width: 600px;margin-top: 475px;left: 130px;}
+.sc4>ul{}
+.sc4>ul>li{float: left;}
+.sc4>p{font-size:1.4em;font-weight: 600;margin-top: 15px;}
+.sc4>p>strong{font-size: 1.4em}
+
+/*sc5영역*/
+.sc5{width: 500px;height: 230px;position: absolute;margin-top: 440px;left: 1250px;background-color: rgba(9, 34, 173, 0.77);}
+.sc5:hover{background-color: rgba(112, 7, 188, 0.77);}
+
+.sc5 h3 .gg{font-size: 1.5em;font-weight: 900;color:white;display: 		block;position: absolute;margin-top: 25px;margin-left: 35px;}
+.sc5 li{position: absolute;font-size: 1.2em;color:white;text-align: left;margin-top:80px;font-weight: 600;margin-left: 35px;width: 300px;}
+.sc5 ul>li>a{color: white}
+.sc5>ul>li:nth-child(2){margin-top: 120px;}
+.sc5>ul>li:nth-child(3){margin-top: 160px;}
+.sc5 .ps{position: absolute;margin-top: 18px;margin-left: 410px;}
+/* page1 intro끝*/
+
+/* page2 main1시작*/
+#page2{background-image: url(../img/main1_bgc.jpg);width: 100%;height: 100%;background-repeat: no-repeat;
+background-position: center;
+	background-size: cover;position: relative;}
+.scroll{position: absolute;bottom:20px;left:50%;
+		transform:translateX(-50%);
+		animation-name: xScroll;
+		animation-duration:0.8s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		}
+@keyframes xScroll{
+			from{bottom: 20px;}
+			to{bottom: 40px;}}
+
+
+/* page2  sc1영역*/ 
+.pg2_sc1{position: absolute;
+	top: 0;
+	width: 100%;}
+.pg2_sc1>ul{}
+.pg2_sc1>ul>li{position: absolute;}
+.pg2_sc1>ul>li:nth-child(2){right: 0px;}
+.dg1{height: 100%;width: 1250px;margin: 195px auto;}
+
+/* page2  sc2영역*/ 
+.pg2_sc2{position: absolute;
+	width: 100%;
+	margin-top: 100px;}
+.pg2_sc2>ul{}
+.pg2_sc2>ul>li{position: absolute;}
+
+.pg2_sc2>ul>li:nth-child(2){right: 0;}
+			
+
+/* page2  main영역*/ 
+.main{width: 1000px;
+	position: absolute;
+	left:55%;
+	color:white;
+	transform:translate(-50%,-60%);
+	text-align: left;}
+.main h3{font-size:4em;
+	text-shadow: 0 2px 3px black;
+	text-align: left;}
+.main p{font-size:2.4em;
+	margin-top: 70px;
+	margin-bottom:30px;
+	text-shadow: 0 1px 2px black;}
+.main a{display: block;
+	background-color: rgba(20, 16, 15, 0.76);
+	color: #fff;
+	font-size: 1.4em;
+	text-align: center;
+	width: 150px;
+	border: 2px solid #fff;
+	line-height:45px;
+	border-radius:7px;
+	transition:0.3s;
+	margin: 10px 320px;}
+	
+.main a:hover{background-color: rgba(119, 9, 142, 0.71);color:#fff;}
+#onView{top:20%;transition:0.3s;opacity:0;}
+#onView.move{top:50%;opacity:1;}
+
+/* page2 main1끝*/
+
+/* page3  main2시작*/
+#page3{background-image: url(../img/main2_bgc.jpg);width: 100%;height: 100%;background-repeat: no-repeat;
+background-position: center;
+	background-size: cover;position: relative;}
+.scroll{position: absolute;bottom:20px;left:50%;
+		transform:translateX(-50%);
+		animation-name: xScroll;
+		animation-duration:0.8s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		}
+@keyframes xScroll{
+			from{bottom: 20px;}
+			to{bottom: 40px;}}
+
+.pg3_content1{position: absolute; 
+	bottom: -5px;left:5px ;}
+
+.pg3_top{position: absolute;
+	width: 100%;
+	height: 356px;top: -10px;}
+.pg3_top ul{}
+.pg3_top ul li{position: absolute;left: -15px;}
+.pg3_top ul li:nth-child(2){position: absolute;
+	left: 1620px;}
+
+
+.pg3_bt{position: absolute;
+		width: 100%;height: 430px;bottom: -3px}
+.pg3_bt ul{}
+.pg3_bt ul li{position: absolute;left: 0px;}
+.pg3_bt ul li:nth-child(2){position: absolute;left: 1300px;}
+
+.gy{width: 1100px;
+	height: 570px;
+	margin: 20px auto;
+	background-color: red;
+	}
+.img{
+	width: 1000px;
+	height: 450px;
+	margin: 0 auto;
+	margin-left: 50px;
+	}
+.gy p{display: none;}
+
+.tb{width: 1000px;
+	height: 80px;
+	background-color: aqua;
+	margin-top: 550px;}
+
+.tb div{float: left;}
+.tb div.left{
+	width: 40px;
+	margin-left: -30px;}
+.tb .ct{width: 1000px;
+	height: 70px;
+	position: relative;
+	overflow: hidden;
+	top: -85px;
+	background-color: coral;}
+.tb .ct ul{width: 3300px;
+	position: absolute;
+	left: 0;
+	}
+.tb .ct ul li{
+	width: 165px;
+	height: 70px;
+    margin-left: 8px;
+	text-align: center;
+    line-height: 70px;
+    border: 1px solid #fff ;
+	font-size: 1.3em;
+	background-color: rgba(71, 45, 180, 0.73);
+     color:#fff;
+   }
+.m0{margin-left: 0; }
+
+
+/* page3  main2끝*/
+
+/* page4  main3시작*/
+#page4{background-image: url(../img/main3_bgc.png);width: 100%;height: 100%;background-repeat: no-repeat;
+background-position: center;
+	background-size: cover;position: relative;}
+.scroll{position: absolute;bottom:20px;left:50%;
+		transform:translateX(-50%);
+		animation-name: xScroll;
+		animation-duration:0.8s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		}
+@keyframes xScroll{
+			from{bottom: 20px;}
+			to{bottom: 40px;}}
+
+
+
+.pg4_ct1{position: absolute;width: 100%;top: 0;}
+.pg4_ct1 li{position: absolute;left: 0;}
+
+.pg4_ct1 li:nth-child(1){top: 145px;left:850px;
+	animation:bh 27s infinite alternate linear;}
+@keyframes bh{
+	from{top:145px;left: 135px}
+	to{top:35px;left:1350px;}}
+.pg4_ct1 li:nth-child(3){position: absolute;left: 1930px;top: -23px;
+animation: sky1 1.8s infinite alternate linear;}
+@keyframes sky1{
+	from{left: 1930px}
+	to{left:410px; }}
+.pg4_ct1 li:nth-child(4){position: absolute;left: 1730px;top: 250px;
+   			animation: sky2 3s infinite alternate linear}
+@keyframes sky2{
+	from{top: 250px;}
+	to{top: 210px; }}
+
+.pg4_ct1 li:nth-child(5){top: 485px;left:1820px;
+	animation: sky3 22s infinite alternate linear;}
+@keyframes sky3{
+	from{top: 485px }
+	to{ top:125px}}
+
+.pg4_ct2{width: 100%;height: 800px;
+	position: absolute;top:0}
+.pg4_ct2 li{position: absolute;left: 0;}
+.pg4_ct2 li:nth-child(1){top: 495px;left:35px;position: absolute;
+		animation: sky4 22s infinite alternate linear;}
+@keyframes sky4{
+	from{top: 495px }
+	to{ top:325px}}
+.pg4_ct2 li:nth-child(2){top:195px;left:25px;
+animation: sky5 25s infinite alternate linear;}
+@keyframes sky5{
+	from{left: 25px }
+	to{ left:175px;}}
+.pg4_ct2 li:nth-child(3){top:25px;left:525px;
+		animation: sky6 25s infinite alternate linear;}
+@keyframes sky6{
+	from{left: 525px }
+	to{ left:875px;}}
+
+.pg4_dg{position: absolute;
+	width: 100%;
+	left: 55px;
+	bottom: -4px;}	
+.pg4_cs3{position: absolute;width: 100%;height: 700px;
+	bottom: 0px;}
+.pg4_cs3 ul{}
+.pg4_cs3 ul li{position: absolute;top: 0px;}
+.pg4_cs3 ul li:nth-child(1){position: absolute;left: 165px;top: -30px;}
+
+.pg4_cs3 ul li:nth-child(2){position: absolute;left: 1730px;
+	top:180px;animation: ani1 4s infinite alternate linear;}
+@keyframes ani1{
+	from{top: 180px }
+	to{ top:-100px;left: 1560px;}}
+
+.pg4_cs3 ul li:nth-child(3){position: absolute;left: 1800px;
+	top: 390px;animation: ani2 4s infinite alternate linear;}
+@keyframes ani2{
+	from{left: 1800px }
+	to{ left: 1400px;}}
+
+.pg4_cs3 ul li:nth-child(4){position: absolute;left: 140px;top: 300px;}
+
+.slider_pg4wrap{width: 630px;
+	height:350px;
+	position: relative;
+	left:32%;
+	top:105px;
+	}
+.slider_pg4wrap ul{width: 630px;
+	height: 350px;
+	position: absolute;}
+
+.slider_pg4wrap ul li{width: 630px;
+	height: 350px;
+	position: absolute;
+	left: 0px;}
+.slider_pg4wrap .txts{position: absolute;
+	left: 190px;top:75px;}
+
+.slider_pg4wrap .txts h3{font-size: 2em;
+	color: white;
+	text-shadow: 1px 1px black;}
+.pg4-txt{width: 1000px;
+	height: 50px;
+	top: -395px;
+	position: relative;
+	left:0;
+	}
+.pg4-txt h3{position: absolute;
+	width: 1000px;
+	height: 50px;
+	font-size: 3.5em;
+	color: white;
+	left: 62%;
+	text-shadow: 2px 2px black;}
+
+/* page4  main3끝*/
+
+/* page5  main4시작*/
+#page5{background-image: url(../img/main4-bgc2.png);width: 100%;height: 100%;background-repeat: no-repeat;
+background-position: center;
+	background-size: cover;position: relative;}
+.scroll{position: absolute;bottom:20px;left:50%;
+		transform:translateX(-50%);
+		animation-name: xScroll;
+		animation-duration:0.8s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		}
+@keyframes xScroll{
+			from{bottom: 20px;}
+			to{bottom: 40px;}}
+.pg5_sc1{width: 100%;
+	position: absolute;
+	height: 810px;}
+.pg5_sc1 ul{}
+.pg5_sc1 ul li{position: absolute;top: 0;}
+	
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		

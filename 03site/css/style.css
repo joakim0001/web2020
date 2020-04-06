@@ -25,13 +25,13 @@ nav.menu>ul>li>a{font-size: 18px; font-weight: 400;width: 163px;line-height:50px
 			background-size:cover;
 			position: relative;
 			}
-#container>h2{color: #152630;top: 90px;
-				font-size: 60px;right:580px;position: absolute;
+#container>h2{color: #152630;top: 90px;position: relative;
+				font-size: 60px;margin-left:230px;
 animation-name: myan3;animation-iteration-count:number;
 	animation-direction: alternate;animation-timing-function: linear;animation-duration: 2s;} 
-@keyframes myan3{from{ left:920px;}
-	to{left:940px;}}
-#container>h2>span{text-decoration: underline;}
+@keyframes myan3{from{ left:720px;}
+	to{left:540px;}}
+#container>h2>span{text-decoration: underline;position: absolute}
 
 #container>p{position: absolute;top: 175px;right: 520px;font-size: 30px;line-height: 45px;}
 

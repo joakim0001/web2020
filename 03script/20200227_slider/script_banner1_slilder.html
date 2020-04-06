@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>banner1_slider</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(function(){
+			var current = 0;
+			var start = 0;
+			function kimJ(){
+				 move(current,"0","0");
+				 current++;
+				 if(current==3){current=0;}
+				 if(start==2){start=0;}
+				 move(current,"1","1");
+			}
+			setInterval(kimJ,1000);
+
+			function move(index,start,end){
+				$("#wrapper1 li").eq(index).css("z-index",start).stop().animate({opacity:end},1000);
+			}
+		});
+	</script>
+	<style>
+		img{width: 1000px; display: block;}
+		#wrapper1{width: 1000px;height: 250px;margin: 50px auto;}
+		#wrapper1 ul{width: 700px;height: 290px; margin: 50px auto;overflow: hidden; position: relative;}
+		#wrapper1 ul li{position: absolute; left: 0; opacity: 0; z-index:0;}
+		#wrapper1 ul li:first-child{opacity: 1;}
+	</style>
+</head>
+<body>
+	<div id="wrapper1">
+		<ul>
+			<li><img src="../../img/images01.jpg" alt=""></li>
+			<li><img src="../../img/images03.jpg" alt=""></li>
+			<li><img src="../../img/images05.jpg" alt=""></li>
+
+			
+		</ul>
+	</div>
+</body>
+</html>
+<!-- $(function(){
+			var current = 0;
+			var start = 0;
+			function kimJ(){
+				 move(current,"0","0");
+				 current++;
+				 if(current==4){current=0;}
+				 if(start==3){start=0;}
+
+				 move(current,"1","1");
+			}
+			setInterval(kimJ,1000);
+			function move(index,start,end){
+				$("#wrapper1 li").eq(index).css(
+					"z-index",start).stop().animate({opacity:end},1000);
+			}
+		}); -->

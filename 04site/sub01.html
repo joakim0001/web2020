@@ -5,28 +5,33 @@
 	<title>LG기업홈페이지sub01</title>
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/stylesub01.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/wow.js"></script>
+	<script>
+		new WOW().init();
+	</script>
 
 	
 	
-	<script src="js/jquery-3.1.1.min.js"></script>
-	<script src="js/jquery.bxslider.js"></script>
 </head>
 <body>
 <!--헤더영역-->
 <header id="sub01main-hd">
 	<div id="s01main-top" class="clearfix">
 	<h1>
-		<a href="#"><img src="images/%EB%A1%9C%EA%B3%A01.png" alt="로고이미지"></a>
+		<a href="index.html"><img src="images/logo1.png" alt="로고이미지"></a>
 		<p>LG</p>
 	</h1>
-	<nav id="main-menu">
+	<nav id="sbmain-menu">
 		<ul class="clearfix">
 			<li><a href="sub01.html">LG소개</a></li>
-			<li><a href="#">CRS</a></li>
-			<li><a href="#">IR</a></li>
-			<li><a href="#">미디어</a></li>
-			<li><a href="#">채용</a></li>
+			<li><a href="sub02.html">CRS</a></li>
+			<li><a href="sub03.html">IR</a></li>
+			<li><a href="sub04.html">미디어</a></li>
+			<li><a href="sub05.html">채용</a></li>
 		</ul>
 	</nav>
 	<h2>회사소개</h2>
@@ -37,19 +42,20 @@
 <!--sub01menu-->
 <nav class="sub01menu">
 	<ul class="clearfix">
-		<li><a href="">전자계열</a></li>
-		<li><a href="">화학계열</a></li>
-		<li><a href="">통신/서비스계열</a></li>
-		<li><a href="">지주회사</a></li>
+		<li><a href="#content1">전자계열</a></li>
+		<li><a href="#content2">화학계열</a></li>
+		<li><a href="#content3">통신/서비스계열</a></li>
+		<li><a href="#content4">지주회사</a></li>
 	</ul>
 </nav>
 <!--container-->
-<div class="container">
+
+<div class="sub1container">
 <!--content1-->
-	<div class="content1">
+	<div class="content1" id="content1">
 		<div class="icon_txt2">
 			<h3>전자계열</h3>
-			<img src="images/%EC%A0%84%EC%9E%90icon.png" alt="icon2">
+			<img src="images/icon2-1.png" alt="icon2">
 		</div>
 		<ul class="clearfix">
 			<li><a href="">
@@ -75,40 +81,119 @@
 		</ul>
 	</div>
 	
+	
 	<!--content2-->
-	<div class="content2">
+	<div class="content2"  id="content2">
 		<div class="icon_txt2">
 			<h3>화학계열</h3>
-			<img src="images/%ED%99%94%ED%95%99icon.png" alt="">
+			<img src="images/icon2-4.png" alt="">
 		</div>
 		<ul class="clearfix">
 			<li><a href="">
 			<img src="images/sub1-2-1.png" alt="lg전자">
-				<p>LG화학</p>
+				<p>LG U+</p>
 			</a>
 			</li>
 			<li><a href="">
 			<img src="images/sub1-2-2.png" alt="lg실리콘윅스">
-				<p>LG하우시스</p>
+				<p>LG경영개발원</p>
 			</a>
 			</li>
 			<li><a href="">
 			<img src="images/sub1-2-3.png" alt="lg이노텍스">
-				<p>LG생활</p>
+				<p>LG지투알</p>
 			</a>
 			</li>
 			<li><a href="">
 			<img src="images/sub1-2-4.png" alt="lg디스플레이">
-				<p>LGMMA</p>
+				<p>LGCNS</p>
 			</a>
 			</li>
 		</ul>
 	</div>
+<!-- 	!--content3 -->
+	<div class="content3" id="content3">
+		<div class="icon_txt2">
+			<h3>통신/서비스계열</h3>
+			<img src="images/icon2-3.png" alt="">
+		</div>
+		<ul class="clearfix">
+			<li><a href="">
+			<img src="images/sub1-3-1.png" alt="lg전자">
+				<p>LG U+</p>
+			</a>
+			</li>
+			<li>
+				<a href="">
+			<img src="images/sub1-3-2.png" alt="lg실리콘윅스">
+				<p>LG경영개발원</p>
+			</a>
+			</li>
+			<li><a href="">
+			<img src="images/sub1-3-3.png" alt="lg이노텍스">
+				<p>LG지투알</p>
+			</a>
+			</li>
+			<li><a href="">
+			<img src="images/sub1-3-4.png" alt="lg디스플레이">
+				<p>LGCNS</p>
+			</a>
+			</li>
+		</ul>
+	</div>
+<!-- 	!--content4 -->
+	<div class="content4" id="content4">
+		<div class="icon_txt2">
+			<h3>지주회사</h3>
+			<img src="images/icon2-2.png" alt="">
+		</div>
+		<ul class="clearfix">
+			<li><a href="">
+			<img src="images/sub1-4-1.png" alt="lg전자">
+				<p>(주)LG</p>
+			</a>
+			
+		</ul>
+	</div>
+</div>
+<div class="subfooter">
+	<div class="sub-centent">
+		<nav class="sbft-menu">
+			<ul class="clearfix">
+				<li><a href="">유튜브</a></li>
+				<li><a href="">네이버포스트</a></li>
+				<li><a href="">페이스북</a></li>
+				<li><a href="">인스타그램</a></li>
+				<li><a href="">LG소셜미디어맵</a></li>
+			</ul>
+		</nav>
+		<div class="subft-bt">
+			<ul class="clearfix">
+				<li class="sbft">
+				<a href="">
+					<img src="images/logo2.png" alt="로고이미지">
+					<h3>LG</h3>
+				</a>
+					
+				</li >
+				<li class="sbft-btmenu ">
+				<a href="" class="mu1">
+					<h3>사이트맵</h3>
+				</a>
+				<a href="" class="mu2">
+					<h3>고객센터</h3>
+				</a>
+				</li>
+				<p>ⓒLG커뮤니케이션,S&I코퍼레이션</p>
+			</ul>
+		</div>
+		
+	</div>
 	
-	
+</div>
+
 			
 		
 		
-</div>
 </body>
 </html>

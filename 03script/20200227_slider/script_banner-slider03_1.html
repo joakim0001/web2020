@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>slider복습</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		
+		.wrapper{width: 640px;	height: 460px;	margin: 20px auto;background-color: black;}
+		.wrapper img{width: 640px;display: block;	}
+		.wrapper ul.slider{width:640px;	height: 360px;
+				position: relative;	overflow: hidden;}
+		.wrapper ul.slider li{position: absolute;left: 100%}
+		.wrapper ul.slider li:nth-child(1){left: 0}
+
+	</style>
+	<script>
+		$(function(argument){
+			var current = 0;
+			var banner = $("ul.slider li");
+			var bCount = banner.length;
+			var i;
+			var overBtn = false;
+
+			function nextSlider(){
+				if(overBtn == false){
+				overBtn = true;
+				i =current + 1;
+				if(i==bCount){
+					i=0;
+					current=bCount-1;
+				}
+				var currentEl = bCount.eq(current);
+				var nextEl = banner.eq(i);
+
+				currentEl.css({left:0}).stop().
+						animate({left:"-100%"},1000);
+				}
+			}
+		});
+	</script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="slider">
+			<ul class="slider">
+				<li>
+					<img src="../../fullpage-site/img/main3-s1.png" alt="">
+				</li>
+				<li>
+					<img src="../../fullpage-site/img/main3-s2.png" alt="">
+				</li>
+				<li>
+					<img src="../../fullpage-site/img/main3-s3.png" alt="">
+				</li>
+				<li>
+					<img src="../../fullpage-site/img/main3-s4.png" alt="">
+				</li>
+				<li>
+					<img src="../../fullpage-site/img/main3-s5.png" alt="">
+				</li>
+			</ul>
+			<div class="btn">
+			<div class="bt-prer"><img src="../../fullpage-site/img/icons-left.png" alt=""></div>	
+			<div class="bt-next"><img src="../../fullpage-site/img/icons-right.png" alt=""></div>	
+			</div>		
+		</div>
+	</div>
+</body>
+</html>
